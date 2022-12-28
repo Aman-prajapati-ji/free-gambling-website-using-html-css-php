@@ -1,0 +1,1038 @@
+html{
+    scroll-behavior: smooth;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'DaxlinePro', sans-serif;
+    box-sizing: border-box;
+    background-color: #f8f8f8;
+}
+
+
+.header{
+    width: 100%;
+    color: #fff;
+}
+.header .shadow{
+    box-shadow: 1px 20px 25px rgba(0, 0, 0, .3);
+    height: 100%;
+    width: 100%;
+}
+.header .background{
+    /* background-color: rgb(15, 63, 25); */
+    background-image: url(/project3/images/photo52.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 20px;
+}
+
+/* Navigation Bar */
+/* .navbar{
+    width: 100%;
+    height: 60px;
+    background-color: rgb(44, 44, 44);
+}
+.navlinks{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    margin: 0 auto;
+}
+.navlinks .logo{
+    text-align: center;
+    width: 10%;
+}
+.navlinks .logo img{
+    margin-top: 10px;
+    height: 40px;
+    width: 40px;
+}
+.navlinks .links{
+    width: 90%;
+}
+.navlinks .links ul {
+    height: 100%;
+    display: flex;
+    list-style: none;
+    float: right;
+    justify-content: center;
+}
+.navlinks .links ul li{
+    display: inline-block;
+    margin: 20px;
+}
+.navlinks .links ul li a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+.navlinks .links ul li a:hover{
+    transition: all 0.3s ease-in-out;
+    border-bottom: 2px solid rgb(255, 145, 0);
+}
+.navlinks .links ul li a i{
+    padding-left: 5px;
+}
+.navlinks .links ul li button {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    padding: 3px;
+    cursor: pointer;
+} */
+
+/* Navigation Bar */
+nav{
+    background-color: rgb(44, 44, 44);
+    height: 80px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+}
+label.logo{
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 50px;
+    font-weight: bold;
+}
+img.logo{
+    margin: 15px;
+    margin-left: 40px;
+}
+@media (max-width: 870px){
+    img.logo{
+        margin: 15px;
+        margin-left: 20px;
+    }
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 10px;
+}
+nav ul li a{
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+a.active,a:hover{
+    background: #ffffff;
+    color: black;
+    transition: .5s;
+}
+nav ul li a i{
+    padding-left: 5px;
+}
+nav ul li button {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    padding: 3px;
+    cursor: pointer;
+}
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+@media (max-width: 952px){
+    label.logo{
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+@media (max-width: 858px){
+    .checkbtn{
+        display: block;
+    }
+    nav ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    a:hover,a.active{
+        background: none;
+        color: #0082e6;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+}
+/* popup */
+.popup-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .2);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.popup-container .popup{
+    background-color: white;
+    width: 550px;
+    border-radius: 5px;
+    padding: 20px 25px 30px 25px;
+}
+.popup-container .popup h2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    color: #304754;
+}
+.popup-container .popup h2 button{
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 18px;
+    font-weight: 550;
+}
+
+
+/* Header Section */
+.header-body{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.header-text{
+    width: 100%;
+    margin-right: 50px;
+    height: 100%;
+}
+
+h1{
+    color:#ffa33f;
+}
+.header-links{
+    padding-top: 40px;
+    width: 100%;
+    display: flex;
+}
+.link{
+    background-color: white;
+    display: flex;
+    width: 100%;
+    height: 50px;
+    /* border: 1px solid red; */
+    border-radius: 30px;
+    margin: 40px;
+    padding: 10px;
+}
+@media (max-width: 1000px){
+    .header-links{
+        display: block;
+    }
+    .link{
+        width: 88%;
+        margin-top: 20px;
+    }
+}
+@media (max-width: 500px){
+    .link{
+        margin: 15px;
+    }
+}
+
+.link-img{
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    width: 20%;
+}
+.link-img img{
+    width: 50px;
+    height: 50px;
+}
+.link-link{
+    width: 80%;
+    padding-top: 15px;
+}
+.link-link a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+.link-icon{
+    width: 20%;
+    padding-top: 20px;
+}
+.link-icon i{
+    color: rgb(0, 0, 0);
+}
+
+/* main body */
+.main-body{
+    width: 100%;
+    height: 100%;
+    /* background-color: orange; */
+}
+.container{
+    background: rgb(255, 255, 255);
+    width: 80%;
+    padding: 40px;
+    padding-top: 10px;
+    margin: 50px auto;
+    border-radius: 20px;
+    box-shadow: 1px 1px 40px rgba(0, 0, 0, .2);
+}
+.container h2{
+    margin: 50px 0 50px 0;
+    padding: 0;
+    text-align: center;    
+}
+@media (max-width:650px){
+    .container h2{
+            margin: 20px;
+    }
+}
+@media (max-width:1130px){
+    .container h2{
+            font-size: 20px;
+    }
+}
+.container p{
+    padding: 20px 10px 10px 10px;
+    text-align: start;
+}
+@media (max-width:1215px){
+    .container p{
+            padding: 0;
+    }
+}
+
+/* why indian lotory */
+.background-why-indian-lotory{
+    padding: 10px;
+    background-color: 	#89b336;
+}
+
+.profile-image{
+    margin-top: 30px;
+    width: 100%;
+}
+.profile-image1{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    /* remove justify content center for 4 people */
+}
+.profile-image1 h3{
+    text-align: center;
+    display: flex;
+    width: 25%;
+    justify-content: center;
+}
+.profile-img-with-name{
+    /* width: 25%; */
+    /* for 4 photos use 25% width */
+    text-align: center;
+}
+.profile-img-with-name img{
+    width: 200px;
+    height: 200px;
+}
+
+.company-img-with-name{
+    width: 25%;
+    text-align: center;
+    /* Removed text align center for 4 people team */
+}
+.company-img-with-name img{
+    width: 200px;
+    height: 60px;
+}
+
+
+/* indian lotory wining numbers */
+.main-body article .body4{
+    box-sizing: border-box;
+    width: 100%;
+    background-color: rgb(240, 240, 240);
+    padding: 10px 120px 50px 120px;
+}
+.main-body article .body4 h5{
+    margin-top: 40px;
+    font-weight: 400;
+    font-size: 18px;
+}
+.main-body article .body4 h6{
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 400;
+}
+.main-body article .body4 h2{
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+.main-body article .body4 p{
+    padding: 0;
+    margin: 10px 10px 10px 0;
+    text-align: left;
+    color: rgb(126, 13, 13);
+    font-size: 18px;
+}
+.main-body article .body4 button{
+    padding: 15px 100px;
+    border: 1px solid black;
+    color: rgb(46, 45, 45);
+    border-radius: 30px;
+    margin-top: 20px;
+    font-size: 16px;
+    box-shadow: 1px -5px 25px rgba(0, 0, 0, .3);
+}
+.main-body article .body4 button:hover{
+    color: rgb(46, 192, 33);
+    transition: ease all 0.5s;
+    box-shadow: 1px 5px 25px rgb(46, 192, 33,.6);
+    background-color: #fff;
+}
+.main-body article .body4 .date-of-lotory{
+    margin: 30px;
+    text-align: left;
+}
+.main-body article .body4 .date-of-lotory select{
+    padding: 15px 20px;
+    border: 1px solid black;
+    border-radius: 20px;
+    outline: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #a1580a;
+}
+.main-body article .jackpot-2-main-1{
+    width: 100%;
+    display:flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+.main-body article .jackpot-2-main-1 .jackpot-numbers{
+    border: 1px ridge gray;
+    position: relativ;
+    background-color: white;
+    margin: 7px;
+    padding: 15px;
+    border-radius: 50px;
+}
+.main-body article .jackpot-2-main-1 .jackpot-numbers:hover{
+    background-color: #d4720a;
+    color: white;
+    border: 1px solid white;
+}
+.main-body article .jackpot-2-main-1 a{
+    color: black;
+    text-decoration: none;
+}
+
+/* Real Lotory container */
+.container-lotory{
+    padding: 80px;
+    background-color: skyblue;
+}
+@media (max-width:1000px){
+    .container-shadow{
+        box-shadow: 1px 20px 25px rgba(0, 0, 0, .3);
+    }
+}
+.container-background-lotory{
+    background-color: #fff;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container-background-lotory .ticket-1{
+    width: 30%;
+    padding: 10px;
+    display: block;
+    border-right: 1px solid rgb(0, 0, 0);
+}
+.container-background-lotory .ticket-1 .total-number{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.container-background-lotory .ticket-1 .total-number .main-numbers{
+    width: 80%;
+}
+.container-background-lotory .ticket-1 .total-number .royal-numbers{
+    width: 20%;
+}
+.container-background-lotory .ticket-1 span{
+    padding: 10px;
+}
+.container-background-lotory .ticket-1 table{
+    width: 100%;
+    text-align: center;
+}
+.container-background-lotory .ticket-1 table td{
+    padding: 10px;
+}
+.container-background-lotory .ticket-1 button{
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    margin-left: auto;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+.container-background-lotory .ticket-2{
+    width: 30%;
+    padding: 10px;
+    display: block;
+    border-right: 1px solid rgb(0, 0, 0);
+}
+.container-background-lotory .ticket-2 .total-number{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.container-background-lotory .ticket-2 .total-number .main-numbers{
+    width: 80%;
+}
+.container-background-lotory .ticket-2 .total-number .royal-numbers{
+    width: 20%;
+}
+.container-background-lotory .ticket-2 span{
+    padding: 10px;
+}
+.container-background-lotory .ticket-2 table{
+    width: 100%;
+    text-align: center;
+}
+.container-background-lotory .ticket-2 table td{
+    padding: 10px;
+}
+.container-background-lotory .ticket-2 button{
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    margin-left: auto;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+.container-background-lotory .ticket-3{
+    width: 30%;
+    padding: 10px;
+    display: block;
+}
+.container-background-lotory .ticket-3 .total-number{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.container-background-lotory .ticket-3 .total-number .main-numbers{
+    width: 80%;
+}
+.container-background-lotory .ticket-3 .total-number .royal-numbers{
+    width: 20%;
+}
+.container-background-lotory .ticket-3 span{
+    padding: 10px;
+}
+.container-background-lotory .ticket-3 table{
+    width: 100%;
+    text-align: center;
+}
+.container-background-lotory .ticket-3 table td{
+    padding: 10px;
+}
+.container-background-lotory .ticket-3 button{
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    margin-left: auto;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+@media (max-width: 860px){
+    .container-background-lotory{
+        width: 100%;
+    }
+    .ticket-1{
+        width: 100%;
+        border: none;
+        padding: 0;
+    }
+    .main-body article .body4 {
+        padding: 20px;
+    }
+}
+
+/* here is all ticket */
+.container-lotory .container-information{
+    text-align: center;
+    padding: 20px 20px;
+    display: flex;
+    color: white;
+    background-color: rgb(110, 110, 110);
+}
+@media (max-width: 1000px){
+    .container-lotory .container-information{
+        display: block;
+        justify-content: center;
+    }
+    .container-lotory .container-information .container-information-lines{
+        text-align: right;
+        justify-content: right;
+    }
+}
+.container-lotory .container-information .container-information-drow-date{
+    width: 50%;
+}
+.container-lotory .container-information .container-information-lines{
+    display: flex;
+}
+.container-lotory .container-information .container-information-lines p{
+    margin-top: 10px;
+}
+.container-lotory .container-information .container-information-lines span{
+    background-color: #fff;
+    border: solid 1px rgb(68, 68, 68);
+    padding: 10px;
+    color: black;
+    margin: 0;
+}
+
+.container-lotory .container-buy-ticket{
+    padding: 20px 20px;
+    display: flex;
+    background-color: #fff;
+}
+.container-lotory .container-buy-ticket .container-information-drow-date{
+    width: 50%;
+}
+.container-lotory .container-buy-ticket .container-information-lines{
+    width: 50%;
+}
+.container-lotory .container-buy-ticket .container-information-lines button{
+    color: rgb(255, 255, 255);
+    background-color: rgb(54, 83, 11);
+    padding: 20px 50px;
+    outline: none;
+    border: 1px solid black;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 600;
+}
+.container-lotory .container-buy-ticket .container-information-lines button i{
+    font-size: 24px;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.jackpot-real-numbers{
+    width: 100%;
+    display:flex;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: center;
+}
+.jackpot-real-ticket-numbers{
+    position: relativ;
+    background-color: rgb(212, 212, 212);
+    color: rgb(97, 97, 97);
+    margin: 3px;
+    padding: 10px;
+    border-radius: 10px;
+}
+.jackpot-real-ticket-numbers:hover{
+    /* background-color: #d4720a; */
+    background-color: rgb(230, 230, 230);
+    color: rgb(0, 0, 0);
+}
+
+/* indian lotory winner prizepol */
+.main-body article .body4 .lotory-winner-prize{
+    display: flex;
+    width: 100%;
+}
+@media (max-width: 860px){
+    .main-body article .body4 .lotory-winner-prize{
+        display: block;
+    }
+    .main-body article .body4 .lotory-winner-prize-text{
+        width: 100%;
+    }
+    .main-body article .body4 .lotory-winner-prize-numbers{
+        margin: 30px auto;
+        width: 100%;
+    }
+}
+.main-body article .body4 .lotory-winner-prize-text{
+    width: 50%;
+}
+.main-body article .body4 .lotory-winner-prize-text form{
+    text-align: center;
+    padding-right: 90px;
+}
+.main-body article .body4 .lotory-winner-prize-text p{
+    text-align: center;
+    margin-top: 30px;
+    padding-right: 90px;
+}
+.main-body article .body4 .lotory-winner-prize-numbers{
+    margin-top: 30px;
+    width: 70%;
+}
+.main-body article .body4 .lotory-winner-prize-numbers .prize-table{
+    width: 100%;
+    margin-top: 20px;
+    background-color: rgb(59, 59, 59);
+    color: white;
+    text-align: left;
+}
+.main-body article .body4 .lotory-winner-prize-numbers .prize-table tr{
+    display: flex;
+    text-align: center;
+}
+.main-body article .body4 .lotory-winner-prize-numbers .prize-table td{
+    padding: 10px;
+    text-align: center;
+}
+
+
+/* Container guide */
+.main-body article .container-guides{
+    margin: 20px auto;
+    padding: 40px;
+}
+.main-body article .container-guides h2{
+    padding: 20px;
+}
+.main-body article .container-guides p{
+    padding: 10px;
+    text-align: start;
+}
+.main-body article .background-guides-modern-entertainment{
+    padding: 10px;
+    background-color: rgb(83, 74, 23);
+    color: white;
+}
+.main-body article .container-guides-modern-entertainment{
+    /* width: 100%; */
+    padding: 30px;
+}
+.main-body article .container-guides-modern-entertainment h2{
+    margin-bottom: 20px;
+}
+.main-body article .container-guides-modern-entertainment p{
+    padding: 10px;
+    text-align: start;
+}
+.container-modern-entertainment{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.container-modern-entertainment-1{
+    width: 26%;
+    background-color: white;
+    margin-top: 40px;
+    margin: 30px auto;
+    border-radius: 20px;
+    color: black;
+    padding: 20px;
+}
+.container-modern-entertainment-1 img{
+    display: flex;
+    margin: 20px auto;
+}
+@media (max-width: 900px){
+    .container-modern-entertainment-1 img{
+        width: 150px;
+        height: 120px;
+    }
+}
+@media (max-width: 650px){
+    .container-modern-entertainment-1 img{
+        width: 100px;
+        height: 100px;
+    }
+    .container-modern-entertainment{
+        display: block;
+    }
+    .container-modern-entertainment-1{
+        width: 80%;
+    }
+}
+.container-modern-entertainment-1 h3{
+    text-align: center;
+    padding-top: 20px;
+}
+.main-body article .payment-method{
+    padding: 70px 70px 0 70px;
+}
+.main-body article .payment-method h2{
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+    padding-bottom: 10px;
+}
+.main-body article .payment-method p{
+    text-align: start;
+    padding: 7px;
+    margin: 10px;
+}
+.main-body article .payment-method-type{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+@media (max-width: 650px){
+    .main-body article .payment-method-type{
+        display: block;
+    }
+}
+.main-body article .payment-method-type .payment-method-gpay{
+    background-color: #fff;
+    width: 60%;
+    margin: 40px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 1px 1px 40px rgba(0, 0, 0, .2);
+    padding: 40px;    
+}
+@media (max-width: 650px){
+    .main-body article .payment-method-type .payment-method-gpay{
+        justify-content: center;
+        margin: 30px auto;
+    }
+}
+.main-body article .payment-method-type .payment-method-gpay p{
+    text-align: start;
+    padding: 10px;
+}
+.main-body article .payment-method-type .payment-method-gpay img{
+    width: 150px;
+    height: 80px;
+    padding: 10px;
+}
+.main-body article .payment-method-type-1{
+    /* width: 100%; */
+    margin: 0;
+    /* padding: 30px; */
+    padding-bottom: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.main-body article .payment-method-wallets{
+    background-color: #fff;
+    width: 80%;
+    text-align: center;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 1px 1px 40px rgba(0, 0, 0, .2);
+    justify-content: center;
+}
+.main-body article .payment-method-wallets h2,p{
+    padding: 10px;
+}
+
+/* Footer */
+footer{
+    width: 100%;
+    color: white;
+    background-image: url(/project/images/photo52.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.footer .footer-shadow{
+    box-shadow: 1px -20px 25px rgba(0, 0, 0, .3);
+}
+.footer .footer-shadow .footer-background{
+    width: 100%;
+}
+.footer .footer-shadow .footer-background .footer-body{
+    width: 100%;
+    display: flex;
+}
+@media (max-width: 1000px){
+    .footer .footer-shadow .footer-background .footer-body{
+        display: block;
+    }
+}
+.footer .footer-shadow .footer-background .footer-body .footer-logo{
+    margin: 40px;
+    padding: 40px;
+}
+@media (max-width: 1100px){
+    .footer .footer-shadow .footer-background .footer-body .footer-logo{
+        width: auto;
+    }
+}
+@media (max-width: 1000px){
+    .footer .footer-shadow .footer-background .footer-body .footer-logo{
+        margin: 0;
+    }
+}
+.footer .footer-shadow .footer-background .footer-body .footer-logo h2{
+    padding: 0;
+    text-align: center;
+}
+.footer .footer-company-stump{
+    padding: 40px;
+    text-align: center;
+}
+.footer .footer-company-stump-line{
+    padding: 0;
+    text-align: center;
+}
+.footer .footer-company-stump-line p{
+    padding: 0;
+    font-size: 22px;
+    text-align: center;
+}
+.footer-logo p{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.footer-logo .footer-social-icon{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    margin-top: 20px;
+}
+.footer-logo .footer-social-icon .footer-social-icon-fb{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.footer-logo .footer-social-icon .footer-social-icon-fb .fab{
+    width: 40px;
+}
+.footer-logo .footer-social-icon .footer-social-icon-ig{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.footer-logo .footer-social-icon .footer-social-icon-ig .fab{
+    width: 40px;
+}
+.footer-logo .footer-social-icon .footer-social-icon-yt{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.footer-logo .footer-social-icon .footer-social-icon-yt .fab{
+    width: 40px;
+}
+.footer-logo .footer-social-icon .footer-social-icon-twi{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.footer-logo .footer-social-icon .footer-social-icon-twi .fab{
+    width: 40px;
+}
+
+/* Footer Navigation */
+.footer-manu {
+    width: 100%;
+    color: white;
+    background-image: url(/project3/images/photo52.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.footer-navbar{
+    width: 100%;
+    height: 60px;
+    border-top: solid 1px white;
+    border-bottom: solid 1px white;
+}
+.footer-navlinks{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.footer-navlinks .footer-links{
+    width: 100%;
+    text-align: center; 
+    object-fit: contain; 
+    justify-content: center; 
+    align-items: center; 
+    align-content: center; 
+    display: inline-block; 
+
+}
+.footer-navlinks .footer-links ul {
+    height: 100%;
+    display: flex;
+    list-style: none;
+}
+.footer-navlinks .footer-links ul li{
+    margin: 20px;
+}
+.footer-navlinks .footer-links ul li a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+.footer-navlinks .footer-links ul li a i{
+    padding: 5px;
+}
+
+/* Footer Copyright */
+.footer-manu .copyright{
+    padding: 20px;
+    height: 70px;
+    text-align: center;
+}
+.footer-manu .copyright a{
+    text-decoration: none;
+    color: white;
+}
+.footer-manu .copyright h4{
+    margin-top: 20px;
+}
