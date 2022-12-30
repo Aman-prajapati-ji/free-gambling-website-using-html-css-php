@@ -5,3 +5,5 @@ and
 change your folder name everywhere in all files
 
 i think you will understand this project very easily
+
+you see my photo on image folder you should replace with your own photo
